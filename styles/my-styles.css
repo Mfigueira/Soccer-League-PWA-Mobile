@@ -1,0 +1,428 @@
+body {
+  font-family: "Verdana", "Geneva", "sans-serif";
+  background-image: url(images/pelota.png);
+}
+.container {
+  max-width: 100vw;
+}
+section.row {
+  padding-top: 101px;
+  padding-bottom: 120px;
+  overflow: auto;
+}
+#details{
+  padding-bottom: 52px;
+}
+#home{
+  padding-bottom: 0;
+}
+/* ---------------Header css------------ */
+.fixed-top {
+  margin-left: 0;
+  margin-right: 0;
+}
+header>div, .fixed-bottom {
+  background-color: black;
+}
+header>div:last-child, .hgreen {
+  background-color: #358728;
+}
+.logo {
+  width: 2.4em;
+  margin: 10px 0;
+}
+h1, h2 {
+  color: white;
+}
+h1 {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+h2 {
+  font-size: 1em;
+  margin: 12px 0;
+}
+#back-btn {
+  display: none;
+  padding: 5px 10px 5px 0;
+  height: 43px;
+}
+#back-btn.now-back{
+  display: inline;
+}
+/* ---------------footer css-------------- */
+.navbar{
+  padding: 0;
+}
+.navbar-nav{
+  width: 70vw;
+}
+.nav-img-footer {
+  display: none;
+}
+.nav-link {
+  padding: 0;
+}
+.shownav {
+  display: inline;
+  height: 50px;
+  margin-top: 2px;
+}
+/* ---------------main css-------------- */
+a[role="button"] {
+  height: 16vh;
+}
+.btn {
+  border-radius: 0;
+}
+section>a>img {
+  height: 14vh;
+  padding: 3.5vh 1.5vh;
+}
+a.btn, a.btn:hover, div>div>p>a, div>div>p>a:hover {
+  color: black;
+  text-decoration: none;
+}
+h5>a {
+  color: black;
+  text-decoration: underline;
+}
+h3 {
+  line-height: 14vh;
+  font-size: 2em;
+  margin: 0 0 0 0.3em;
+}
+section>div>p {
+  text-align: center;
+  padding-top: 8px;
+}
+div.accordion {
+  padding-left: 0;
+  padding-right: 0;
+}
+div.accordion>div {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+div.accordion>button:nth-of-type(odd), section>a[role="button"]:nth-of-type(odd) {
+  background-color: #BAE6B3;
+}
+div.accordion>button:nth-of-type(even), section>a[role="button"]:nth-of-type(even) {
+  background-color: #D5F5D0;
+  box-shadow: inset 0 30px 60px -30px #BAE6B3,
+              inset 0 -30px 60px -30px #BAE6B3;
+}
+.col-12.col-sm-6.float-left {
+  padding-left: 0;
+  padding-right: 0;
+}
+div.accordion>button>img {
+  padding-top: 2px;
+  height: 5vh;
+}
+object {
+  margin: 15px 0 10px 0;
+  border: 1px solid darkgray;
+}
+div.accordion>div>p {
+  font-size: 20px;
+  border-bottom: 2px solid darkgrey;
+}
+div.accordion>div>p:last-child {
+  font-size: 20px;
+  border-bottom: none;
+}
+.main-arrow{
+  height: 15vh;
+}
+.mapp{
+  height: 50vh;
+  width: 85vw;
+}
+/* ---------------game_details css-------------- */
+.game-det {
+  height: 300px;
+  background-color: #D5F5D0;
+  border-bottom: 1px solid #000;
+  box-shadow: inset 0 30px 500px -30px #BAE6B3,
+              inset 0 -30px 500px -30px #BAE6B3;
+  z-index: 1;
+}
+.game-det>div {
+  height: 100px;
+}
+.match-result{
+  font-size: 2.3em;
+  text-align: center;
+}
+.match-loc{
+  text-align: center;
+}
+#chat-btn>img{
+  margin-right: 16px;
+  float: right;
+  width: 70px;
+}
+
+@-webkit-keyframes boom {
+    0%   {width: 50px; margin: 5px 26px 0 0;}
+    50%  {width: 80px; margin: -5px 11px 0 0;}
+    100% {width: 70px; margin: 0 16px 0 0;}
+}
+.animated {
+  -webkit-animation-name: boom;
+  -webkit-animation-duration: 400ms;
+}
+
+
+/* ---------------messeges css-------------- */
+#messages {
+  padding: 0;
+}
+.hgreen {
+  text-align: center;
+  box-shadow: inset 0 30px 50px -30px #BAE6B3,
+              inset 0 -30px 50px -30px #BAE6B3;
+  padding: 20px;
+}
+.hgreen>h3{
+  line-height: normal;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+main.mdl-layout__content {
+  padding: 0 20px;
+  background-color: #D5F5D0;
+  border: border: 1px solid black;
+}
+main.mdl-layout__content>section {
+  min-height: 300px;
+  padding: 20px 0;
+}
+#sign-out-button, #sign-in-button, form>.mdl-button {
+  border: 1px solid white;
+  color: white;
+  padding: 5px 12px 5px 5px;
+  margin: 0 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+#add {
+  color: white;
+  background-color: #ff9900;
+  border-radius: 50%;
+  padding: 15px 20px;
+  margin: 0 20px 0 30px;
+}
+.mdl-card {
+  box-shadow: inset 0 30px 50px -30px #BAE6B3,
+              inset 0 -30px 50px -30px #BAE6B3;
+  border: 1px solid white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.mdl-card__title>h4 {
+  text-decoration: underline;
+}
+.mdl-card__title>h2 {
+  color: black;
+  font-weight: bold;
+}
+.username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.mdl-textfield__input {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    display: block;
+    font-size: 16px;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
+.mdl-textfield__label {
+    bottom: 0;
+    color: rgba(0,0,0,.26);
+    font-size: 16px;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    display: block;
+    top: 24px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+.star-count{
+  display: inline-block;
+}
+.text {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+
+/* ---------------transitions-------------- */
+#pages {
+position: relative;
+}
+#pages>section {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+}
+#pages>section.current{
+  display: block;
+}
+
+.in, .out {
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-duration: 300ms;
+}
+
+/* Screen pushes out to left */
+@-webkit-keyframes outToLeft {
+from { -webkit-transform: translateX(0); }
+to { -webkit-transform: translateX(-100%); }
+}
+.push.out {
+-webkit-animation-name: outToLeft;
+}
+
+/* Screen pushes in from the right */
+@-webkit-keyframes inFromRight {
+from { -webkit-transform: translateX(100%); }
+to { -webkit-transform: translateX(0); }
+}
+.push.in {
+-webkit-animation-name: inFromRight;
+}
+
+/* Screen pushes reverse */
+@-webkit-keyframes outToRight {
+from { -webkit-transform: translateX(0); }
+to { -webkit-transform: translateX(100%); }
+}
+.push.out.reverse {
+-webkit-animation-name: outToRight;
+}
+
+@-webkit-keyframes inFromLeft {
+from { -webkit-transform: translateX(-100%); }
+to { -webkit-transform: translateX(0); }
+}
+.push.in.reverse {
+-webkit-animation-name: inFromLeft;
+}
+
+/* Screen pushes in from top */
+@-webkit-keyframes inFromTop {
+from { -webkit-transform: translateY(-100%); }
+to { -webkit-transform: translateY(0); }
+}
+.fromTop {
+-webkit-animation-name: inFromTop;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-duration: 300ms;
+}
+
+/* Giro de flechas selectoras */
+img.float-right {
+  -moz-transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+.flip {
+  transform: rotate(90deg);
+}
+
+/*-------------------media querys-------------------*/
+@media (max-width:360px){
+  h1 {
+    font-size: 1.2em;
+    margin: 18px 0;
+  }
+  h2 {
+    font-size: 0.9em;
+    margin: 12px 0;
+  }
+  h3 {
+    line-height: 400%;
+    font-size: 25px;
+  }
+}
+
+@media (orientation: landscape) {
+    section.row {
+      padding-top: 70px;
+      padding-bottom: 100px;
+    }
+    #details{
+      padding-bottom: 42px;
+    }
+    #home{
+      padding-bottom: 0;
+    }
+    .fixed-top>div {
+      height: 45px;
+    }
+    .logo {
+      margin: 4px 0;
+    }
+    h1 {
+      margin: 9px 0;
+    }
+    header>div:last-child {
+      height: 25px;
+    }
+    h2 {
+      font-size: 0.9em;
+      margin: 4px 0;
+    }
+    #back-btn {
+      padding: 0 20px 0 60px;
+      height: 26px;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
+    section>a>img {
+      padding-top: 1.5vh;
+    }
+    img.nav-img-footer.shownav {
+      padding: 2px 0;
+      height: 40px;
+    }
+    div.accordion>button>img {
+      height: 9vh;
+    }
+    .mapp{
+      height: 65vh;
+    }
+    #messenger-body{
+      height: 70vh;
+      overflow-y: auto;
+    }
+    .game-det {
+      height: 70vh;
+      border-right: 1px solid black;
+      border-bottom: none;
+    }
+    .game-det>div {
+      height: 23vh;
+    }
+}
+

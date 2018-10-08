@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYSL Schedule App</title>
+    <link rel="shortcut icon" href="styles/images/logoico.ico">
+    <link rel="apple-touch-icon" href="styles/images/apple-touch-icon.png"> 
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="NYSL App">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="NYSL App">
+    
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    
+    <link href="styles/images/LaunchImage.png" media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/my-styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="row fixed-top">
+        <div class= col-2>
+          <img class="logo" src="styles/images/nysl_logo.png">
+        </div>
+        <div class="col-8 text-center">
+          <h1 class="align-middle">GAME SCHEDULE</h1>
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-12">
+          <a id="bbb" class="anav" href="#home"><img src="styles/images/back.png" id="back-btn" class="float-left"></a>
+          <h2 id="headCambio">Today: <span id="today"></span></h2>
+        </div>
+      </header>    
+      <div id="pages">
+        <section class="row current" id="home">
+          <a class="col-12 btn anav" href="#calendar" role="button"><img class="float-left" src="styles/images/calendar-black.png"><h3 class="float-left">Calendar</h3><img src="styles/images/chevron-right.png" class="float-right main-arrow"></a>
+          <a class="col-12 btn anav" href="#teams" role="button"><img class="float-left" src="styles/images/trophy-black.png"><h3 class="float-left">Teams</h3><img src="styles/images/chevron-right.png" class="float-right main-arrow"></a>
+          <a class="col-12 btn anav" href="#locations" role="button"><img class="float-left" src="styles/images/screenshot-black.png"><h3 class="float-left">Locations</h3><img src="styles/images/chevron-right.png" class="float-right main-arrow"></a>
+          <div class="col-12">
+            <p>
+              <i>*All games take place on Saturday</i><br>
+              <b>Facility Type:</b> Outdoor.<br>
+              <b>More Info:</b> <a href="#">www.nysl.com</a>.<br>
+              <b>Mail to:</b> <a href="mailto:michael.randall@chisoccer.org">Michael Randall, League Coordinator</a>.
+            </p>
+          </div>
+        </section>      
+        <section class="row" id="calendar">
+          <div class="col-12 accordion" id="datesAccord">
+            <button class="btn btn-block">
+              <h5 class="float-left pt-1 pl-3"><b>SEPTEMBER</b></h5>
+            </button>
+            <button class="my-0 btn btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="headingOne">
+              <h5 class="float-left pt-1 pl-3">09/01</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseOne" class="collapse justify-content-center" aria-labelledby="headingOne" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_1" href="#details">Game 1: U1 and U4 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_2" href="#details">Game 2: U3 and U2 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+              <h5 class="float-left pt-1 pl-3">09/08</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_3" href="#details">Game 1: U5 and U6 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_4" href="#details">Game 2: U6 and U1 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+              <h5 class="float-left pt-1 pl-3">09/15</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_5" href="#details">Game 1: U2 and U4 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_6" href="#details">Game 2: U3 and U5 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="headingFour">
+              <h5 class="float-left pt-1 pl-3">09/22</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_7" href="#details">Game 1: U1 and U3 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_8" href="#details">Game 2: U2 and U6 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="headingFive">
+              <h5 class="float-left pt-1 pl-3">09/29</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#datesAccord">
+              <p class="pt-3 pb-1"><a class="anav game_9" href="#details">Game 1: U4 and U5 - 9:30 a.m.</a></p>
+            </div>
+            <button class="btn btn-block">
+              <h5 class="float-left pt-1 pl-3"><b>OCTOBER</b></h5>
+            </button>          
+            <button class="my-0 btn btn-block" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="headingSix">
+              <h5 class="float-left pt-1 pl-3">10/06</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_10" href="#details">Game 1: U2 and U5 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_11" href="#details">Game 2: U1 and U6 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" id="headingSeven">
+              <h5 class="float-left pt-1 pl-3">10/13</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_12" href="#details">Game 1: U3 and U4 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_13" href="#details">Game 2: U5 and U1 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" id="headingEight">
+              <h5 class="float-left pt-1 pl-3">10/20</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_14" href="#details">Game 1: U6 and U3 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_15" href="#details">Game 2: U2 and U4 - 1:00 p.m.</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" id="headingNine">
+              <h5 class="float-left pt-1 pl-3">10/27</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#datesAccord">
+              <p class="py-3"><a class="anav game_16" href="#details">Game 1: U3 and U1 - 9:30 a.m.</a></p>
+              <p class="pb-1"><a class="anav game_17" href="#details">Game 2: U5 and U6 - 1:00 p.m.</a></p>
+            </div>           
+          </div>
+        </section>       
+        <section class="row" id="teams">
+          <div class="col-12 accordion" id="accordionExample">
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" id="heading1">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U1</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse1" class="collapse justify-content-center" aria-labelledby="heading1" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_1" href="#details">Game 1: 09/01 - U1 and U4</a></p>
+              <p class="pb-3"><a class="anav game_4" href="#details">Game 2: 09/08 - U6 and U1</a></p>
+              <p class="pb-3"><a class="anav game_7" href="#details">Game 3: 09/22 - U1 and U3</a></p>
+              <p class="pb-3"><a class="anav game_11" href="#details">Game 4: 10/06 - U1 and U6</a></p>
+              <p class="pb-3"><a class="anav game_13" href="#details">Game 5: 10/13 - U5 and U1</a></p>
+              <p class="pb-1"><a class="anav game_16" href="#details">Game 6: 10/27 - U3 and U1</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" id="heading2">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U2</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_2" href="#details">Game 1: 09/01 - U3 and U2</a></p>
+              <p class="pb-3"><a class="anav game_5" href="#details">Game 2: 09/15 - U2 and U4</a></p>
+              <p class="pb-3"><a class="anav game_8" href="#details">Game 3: 09/22 - U2 and U6</a></p>
+              <p class="pb-3"><a class="anav game_10" href="#details">Game 4: 10/06 - U2 and U5</a></p>
+              <p class="pb-1"><a class="anav game_15" href="#details">Game 5: 10/20 - U2 and U4</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" id="heading3">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U3</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_2" href="#details">Game 1: 09/01 - U3 and U2</a></p>
+              <p class="pb-3"><a class="anav game_6" href="#details">Game 2: 09/15 - U3 and U5</a></p>
+              <p class="pb-3"><a class="anav game_7" href="#details">Game 3: 09/22 - U1 and U3</a></p>
+              <p class="pb-3"><a class="anav game_12" href="#details">Game 4: 10/13 - U3 and U4</a></p>
+              <p class="pb-3"><a class="anav game_14" href="#details">Game 5: 10/20 - U6 and U3</a></p>
+              <p class="pb-1"><a class="anav game_16" href="#details">Game 6: 10/27 - U3 and U1</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" id="heading4">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U4</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_1" href="#details">Game 1: 09/01 - U1 and U4</a></p>
+              <p class="pb-3"><a class="anav game_5" href="#details">Game 2: 09/15 - U2 and U4</a></p>
+              <p class="pb-3"><a class="anav game_9" href="#details">Game 3: 09/29 - U4 and U5</a></p>
+              <p class="pb-3"><a class="anav game_12" href="#details">Game 4: 10/13 - U3 and U4</a></p>
+              <p class="pb-1"><a class="anav game_15" href="#details">Game 6: 10/20 - U2 and U4</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" id="heading5">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U5</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_3" href="#details">Game 1: 09/08 - U5 and U6</a></p>
+              <p class="pb-3"><a class="anav game_6" href="#details">Game 2: 09/15 - U3 and U5</a></p>
+              <p class="pb-3"><a class="anav game_9" href="#details">Game 3: 09/29 - U4 and U5</a></p>
+              <p class="pb-3"><a class="anav game_10" href="#details">Game 4: 10/06 - U2 and U5</a></p>
+              <p class="pb-3"><a class="anav game_13" href="#details">Game 5: 10/13 - U5 and U1</a></p>
+              <p class="pb-1"><a class="anav game_17" href="#details">Game 6: 10/27 - U5 and U6</a></p>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6" id="heading6">
+              <img class="float-left" src="styles/images/trophy-black.png"><h5 class="float-left pt-1 pl-3">U6</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+              <p class="py-3"><a class="anav game_3" href="#details">Game 1: 09/08 - U5 and U6</a></p>
+              <p class="pb-3"><a class="anav game_4" href="#details">Game 2: 09/08 - U6 and U1</a></p>
+              <p class="pb-3"><a class="anav game_8" href="#details">Game 3: 09/22 - U2 and U6</a></p>
+              <p class="pb-3"><a class="anav game_11" href="#details">Game 4: 10/06 - U1 and U6</a></p>
+              <p class="pb-3"><a class="anav game_14" href="#details">Game 5: 10/20 - U6 and U3</a></p>
+              <p class="pb-1"><a class="anav game_17" href="#details">Game 6: 10/27 - U5 and U6</a></p>
+            </div> 
+          </div>
+        </section>
+        <section class="row" id="locations">
+          <div class="col-12 accordion" id="locsAccord">
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse111" aria-expanded="false" aria-controls="collapse111" id="heading111">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">AJ Katzenmaier</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse111" class="collapse justify-content-center" aria-labelledby="heading111" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6540278726093!2d-87.63123838489135!3d41.90029707200436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809062346" width="280" height="280"></object>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse222" aria-expanded="false" aria-controls="collapse222" id="heading222">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">Greenbay</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse222" class="collapse" aria-labelledby="heading222" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0256428537773!2d-87.64002868489094!3d41.91380747115841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809454684" width="280" height="280"></object>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse333" aria-expanded="false" aria-controls="collapse333" id="heading333">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">Howard A Yeager</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse333" class="collapse" aria-labelledby="heading333" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5854973846967!2d-87.66511458489059!3d41.92326857056588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809503672" width="280" height="280"></object>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse444" aria-expanded="false" aria-controls="collapse444" id="heading444">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">Marjorie P Hart</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse444" class="collapse" aria-labelledby="heading444" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2916358899315!2d-87.64808498489039!3d41.92958427017035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809657719" width="280" height="280"></object>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse555" aria-expanded="false" aria-controls="collapse555" id="heading555">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">North</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse555" class="collapse" aria-labelledby="heading555" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3363025419712!2d-87.64835588489113!3d41.90712867157664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809727561" width="280" height="280"></object>
+            </div>
+            <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse666" aria-expanded="false" aria-controls="collapse666" id="heading666">
+              <img class="float-left" src="styles/images/screenshot-black.png"><h5 class="float-left pt-1 pl-3">South</h5><img class="float-right pr-1" src="styles/images/chevron-right.png">
+            </button>
+            <div id="collapse666" class="collapse" aria-labelledby="heading666" data-parent="#locsAccord">
+              <object class="mapp" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.7478346106604!2d-87.65355788489074!3d41.91977927078447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1528809778734" width="280" height="280"></object>
+            </div> 
+          </div>
+        </section>      
+        <section class="row" id="details">
+          <div class="col-sm-6 float-left game-det">
+            <div class="row">
+              <div class="col-6">
+                <h5 id="date_details" class="float-left pt-4 pl-3"></h5>
+              </div>
+              <div class="col-6">
+                <h6 id="time_details" class="float-right pt-4 pr-3 mb-1"></h6><br><h6 class="float-right pr-3"><b id="status_details"></b></h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 pt-2 match-result">
+                <b id="team1_details"></b><span class="px-4"><span id="goals_t1"></span> - <span id="goals_t2"></span></span><b id="team2_details"></b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-7 pt-3 match-loc">
+                <i>Location:</i><br><h5><a id="loc_details"></a></h5>
+              </div>
+              <div class="col-5">
+                <a id="chat-btn"><img src="styles/images/Live-web-chat-icon.png"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 float-left fromTop" id="messages" style="display: none;">
+            <!-- Splash screen -->
+            <section id="page-splash" class="hgreen">
+              <h3>Game Messenger</h3>
+              <div>
+                <button id="sign-in-button" class="mdl-button mdl-js-button"><i class="material-icons">account_circle</i> Sign in with Email</button>
+              </div>
+            </section>
+            <div id="messenger-body">
+
+              <!-- Header section containing logo and menu -->
+              <div class="hgreen">
+                <h3>Post your messages!</h3>
+                <button id="sign-out-button" class="mdl-button mdl-js-button"><i class="material-icons">account_circle</i> Sign out</button>
+                <button class="mdl-button mdl-js-button" id="add">
+                    <i class="material-icons">mode_edit</i>
+                </button>
+              </div>
+
+              <main class="mdl-layout__content mdl-color--grey-100">
+
+                <!-- Show the add post form -->
+                <section class="mdl-grid content" id="add-post" style="display:none">
+
+                  <!-- Card containing the inputs to add a new messages -->
+                  <div class="mdl-card mdl-cell">
+                    <div class="mdl-card__title">
+                      <h2 class="mdl-card__title-text">New Post</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                      <form id="message-form" action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <input class="mdl-textfield__input" type="text" id="new-post-title">
+                          <label class="mdl-textfield__label" for="new-post-title">Post title...</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
+                          <label class="mdl-textfield__label" for="new-post-message">Post message...</label>
+                        </div>
+                        <button type="submit" class="mdl-button mdl-js-button">
+                          Add post
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  
+                </section>
+                <!-- Show the list of game's posts -->
+                <section class="mdl-grid content" id="top-user-posts-list" style="display:none">
+                  <div class="posts-container mdl-cell mdl-grid">
+                  </div>
+                </section>
+              </main>
+            </div>
+          </div>
+        </section>
+      </div>  
+      <footer class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand fixed-bottom justify-content-center">
+            <ul class="navbar-nav justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link anav" href="#calendar"><img class="nav-img-footer fromBottom" src="styles/images/calendar-white.png"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anav" href="#teams"><img class="nav-img-footer fromBottom" src="styles/images/trophy-white.png"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anav" href="#locations"><img class="nav-img-footer fromBottom" src="styles/images/screenshot-white.png"></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBCKNc3x5yLk90cJXVeo8iunlUBnZBCiVI",
+        authDomain: "manuel-nysl-app.firebaseapp.com",
+        databaseURL: "https://manuel-nysl-app.firebaseio.com",
+        projectId: "manuel-nysl-app",
+        storageBucket: "manuel-nysl-app.appspot.com",
+        messagingSenderId: "263520876165"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <script src="/__/firebase/5.0.0/firebase-app.js"></script>
+    <script src="/__/firebase/5.0.0/firebase-auth.js"></script>
+    <script src="/__/firebase/5.0.0/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
